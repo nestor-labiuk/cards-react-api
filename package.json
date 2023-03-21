@@ -1,0 +1,21 @@
+{
+  "name": "back-clase-02",
+  "version": "1.0.0",
+  "description": "Práctica de back usando EC Modules",
+  "main": "app.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js",
+    "dev":"nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Néstor Labiuk",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
