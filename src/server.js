@@ -1,5 +1,5 @@
 import express from 'express'
-import userRoutes from './routes/users.routes.js'
+import { usersRoutes, productsRoutes} from './routes/index.js'
 
 export class Server {
 
@@ -9,7 +9,8 @@ export class Server {
   }
 
   routes() {
-    this.app.use('/api', userRoutes)
+    this.app.use('/api/users', usersRoutes)
+    this.app.use('/api/products', productsRoutes)
   }
 
   listen() {
