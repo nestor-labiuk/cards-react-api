@@ -17,4 +17,3 @@ export const editProduct = (rep, res) => {
 export const deleteProduct = (rep, res) => {
   res.json('Eliminaste un producto')
 }
-

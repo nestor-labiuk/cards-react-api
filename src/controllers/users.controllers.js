@@ -3,7 +3,8 @@ export const getUsers = (req, res) => {
 }
 
 export const getUser = (req, res) => {
-  res.json('Obtuviste un usuario')
+  const { id } = req.params
+  res.json(`Obtuviste un usuario con el ${id}`)
 }
 
 export const createUser = (req, res) => {
@@ -17,5 +18,3 @@ export const editUser = (req, res) => {
 export const deleteUser = (req, res) => {
   res.json('Borraste un usuario')
 }
-
-
