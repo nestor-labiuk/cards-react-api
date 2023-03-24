@@ -1,5 +1,5 @@
-import { Server } from "./src/server.js";
+import { Server } from './src/server.js'
 
-const server = new Server
+const server = new Server()
 
 server.listen()
