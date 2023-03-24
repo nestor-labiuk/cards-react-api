@@ -1,19 +1,20 @@
-export const getProducts = (rep, res) => {
+export const getProducts = (req, res) => {
   res.json('Obtuviste los productos')
 }
 
-export const getProduct = (rep, res) => {
-  res.json('Obtuviste un producto')
+export const getProduct = (req, res) => {
+  const { id } = req.params
+  res.json(`Obtuviste un producto con el ${id}`)
 }
 
-export const createProduct = (rep, res) => {
+export const createProduct = (req, res) => {
   res.json('Creaste un  producto')
 }
 
-export const editProduct = (rep, res) => {
+export const editProduct = (req, res) => {
   res.json('editaste un producto')
 }
 
-export const deleteProduct = (rep, res) => {
+export const deleteProduct = (req, res) => {
   res.json('Eliminaste un producto')
 }
