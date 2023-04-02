@@ -5,8 +5,8 @@ const router = Router()
 
 router.get('/', getProducts)
 router.get('/:id', getProduct)
-router.post('/', createProduct)
-router.put('/', editProduct)
-router.delete('/', deleteProduct)
+router.post('/:id', createProduct)
+router.put('/:id', editProduct)
+router.delete('/:id', deleteProduct)
 
 export default router

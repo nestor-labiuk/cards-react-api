@@ -8,7 +8,12 @@ export const getUser = (req, res) => {
 }
 
 export const createUser = (req, res) => {
-  res.json('Creaste un usuario')
+  const data = req.body
+
+  res.status(201).json({
+    message: `Usuario ${data.name} creado`,
+    data
+  })
 }
 
 export const editUser = (req, res) => {

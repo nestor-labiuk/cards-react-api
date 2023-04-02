@@ -4,7 +4,12 @@ import { usersRoutes, productsRoutes } from './routes/index.js'
 export class Server {
   constructor () {
     this.app = express()
+    this.middlewares()
     this.routes()
+  }
+
+  middlewares () {
+    this.app.use(express.json())
   }
 
   routes () {
