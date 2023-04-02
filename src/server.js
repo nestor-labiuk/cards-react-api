@@ -1,6 +1,6 @@
 import express from 'express'
 import { usersRoutes, productsRoutes } from './routes/index.js'
-
+import cors from 'cors'
 export class Server {
   constructor () {
     this.app = express()
@@ -10,6 +10,7 @@ export class Server {
 
   middlewares () {
     this.app.use(express.json())
+    this.app.use(cors())
   }
 
   routes () {
