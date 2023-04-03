@@ -1,7 +1,21 @@
 import User from '../model/User.js'
 
-export const getUsers = (req, res) => {
-  res.json('Obtuviste los usuarios')
+export const getUsers = async (req, res) => {
+  const users = await User.find({})
+  const total = await User.conunt()
+
+  if (users) {
+    return res.status(200).json({
+      message: 'Usuarios retornados con exito',
+      total,
+      users
+    })
+  }
+
+  res.status(404).json({
+    message: 'No hay usuarios',
+    data: []
+  })
 }
 
 export const getUser = (req, res) => {
