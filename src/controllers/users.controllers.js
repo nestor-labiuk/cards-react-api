@@ -11,7 +11,7 @@ export const createUser = (req, res) => {
   const data = req.body
 
   res.status(201).json({
-    message: `Usuario ${data.name} creado`,
+    message: `Usuario ${data.firstname} creado`,
     data
   })
 }
