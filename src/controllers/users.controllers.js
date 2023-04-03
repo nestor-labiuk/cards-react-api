@@ -2,7 +2,7 @@ import User from '../model/User.js'
 
 export const getUsers = async (req, res) => {
   const users = await User.find({})
-  const total = await User.conunt()
+  const total = await User.count()
 
   if (users) {
     return res.status(200).json({
